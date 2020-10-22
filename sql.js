@@ -31,7 +31,7 @@ won the most summer medals, along with the number of medals aliased to 'count'.
 */
 
 const mostSummerWins = country => {
-  return;
+  return `SELECT year, COUNT(*) AS 'count' FROM GoldMedal WHERE season = 'Summer' AND country = '${country}' GROUP BY 1 ORDER BY 2 DESC LIMIT 1;`;
 };
 
 /*
